@@ -20,7 +20,6 @@ mandelbrotPlot [-h] [--zmin ZMIN] [--zmax ZMAX] [--pixel-size PIXEL_SIZE] [--max
 
 ### Options
 
-* `-h, --help`: show this help message and exit
 * `--zmin ZMIN`: The minimum complex number (down-left corner)
 * `--zmax ZMAX`: The maximum complex number (up-right corner)
 * `--pixel-size PIXEL_SIZE, -s PIXEL_SIZE`: The size of a pixel in the complex plane
@@ -43,7 +42,6 @@ juliaPlot [-h] [--candidate C] [--zmin ZMIN] [--zmax ZMAX] [--pixel-size PIXEL_S
 
 ### Options
 
-* `-h, --help`: show this help message and exit
 * `--candidate C, -c C`: Parameter defining a specific Julia set
 * `--zmin ZMIN`: The minimum complex number (down-left corner)
 * `--zmax ZMAX`: The maximum complex number (up-right corner)
