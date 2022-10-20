@@ -1,8 +1,8 @@
 import argparse
 from .img_generator import plot_mandelbrot, plot_julia
 
-def mandelbrot():
-    parser = argparse.ArgumentParser(description='Create a mandelbrot figure.')
+
+def add_common_args(parser):
     parser.add_argument(
         '--zmin',
         default= -2 - 1.5j,
@@ -34,5 +34,24 @@ def mandelbrot():
         type=str,
         help="The name of the file where the picture will be saved."
     )
+
+
+def mandelbrot():
+    parser = argparse.ArgumentParser(description='Create a Mandelbrot figure.')
+    add_common_args(parser)
     kwargs = dict(parser.parse_args()._get_kwargs())
     plot_mandelbrot(**kwargs)
+
+
+def julia():
+    parser = argparse.ArgumentParser(description='Create a Julia figure.')
+    parser.add_argument(
+        '--candidate', '-c',
+        dest='c',
+        default= -0.8 + 0.156j,
+        type=complex,
+        help="Parameter defining a specific Julia set"
+    )
+    add_common_args(parser)
+    kwargs = dict(parser.parse_args()._get_kwargs())
+    plot_julia(**kwargs)
