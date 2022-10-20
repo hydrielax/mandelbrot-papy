@@ -26,7 +26,7 @@ def seq(z: complex, c: complex) -> complex:
         z = z ** 2 + c
 
 
-def test_mandelbrot(candidate: complex, itermax: int = 200) -> bool:
+def is_in_mandelbrot(candidate: complex, itermax: int = 200) -> bool:
     """Test if a candidate complex number is within the Mandelbrot space.
 
     Parameters
@@ -41,10 +41,10 @@ def test_mandelbrot(candidate: complex, itermax: int = 200) -> bool:
     bool
         True if the candidate number is within the Mandelbrot space, else False.
     """
-    return test_julia(0, candidate, itermax)
+    return is_in_julia(0, candidate, itermax)
 
 
-def test_julia(z0: complex, candidate: complex, itermax: int = 200) -> bool:
+def is_in_julia(z0: complex, candidate: complex, itermax: int = 200) -> bool:
     """Test if a candidate complex number is within the Julia space.
 
     Parameters
