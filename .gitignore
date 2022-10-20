@@ -1,3 +1,5 @@
 .ipynb_checkpoints/
 build/
 mandelbrot.egg-info/
+*.png
+!img/

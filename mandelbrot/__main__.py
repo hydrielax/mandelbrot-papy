@@ -1,5 +1,5 @@
 import argparse
-from img_generator import plot_mandelbrot, plot_julia
+from .img_generator import plot_mandelbrot, plot_julia
 
 def mandelbrot():
     parser = argparse.ArgumentParser(description='Create a mandelbrot figure.')
@@ -34,5 +34,5 @@ def mandelbrot():
         type=str,
         help="The name of the file where the picture will be saved."
     )
-    args = parser.parse_args()
-    plot_mandelbrot(**args)
+    kwargs = dict(parser.parse_args()._get_kwargs())
+    plot_mandelbrot(**kwargs)

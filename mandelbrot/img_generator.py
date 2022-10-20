@@ -35,6 +35,7 @@ def plot_mandelbrot(
     pil_image = Image.fromarray(np.invert(mandelbrot_set))
     pil_image.save(figname)
 
+
 def plot_julia(
     c: complex = -0.8 + 0.156j,
     zmin: complex = -2 - 1j,
@@ -68,4 +69,4 @@ def plot_julia(
     vec_is_in_julia = np.vectorize(is_in_julia)
     julia_set = vec_is_in_julia(grid, c, max_iter)
     pil_image = Image.fromarray(np.invert(julia_set))
-    pil_image.show(figname)
+    pil_image.save(figname)
