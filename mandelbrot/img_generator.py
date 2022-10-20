@@ -3,9 +3,10 @@ from PIL import Image
 
 from .is_in_set import is_in_mandelbrot, is_in_julia
 
+
 def plot_mandelbrot(
-    zmin: complex = -2 - 1.5j,
-    zmax: complex = 1 + 1.5j,
+    zmin: complex = -2 - 1j,
+    zmax: complex = 1 + 1j,
     pixel_size: float = 5e-3,
     max_iter: int = 200,
     figname: str = 'Mandelbrot figure.png'
