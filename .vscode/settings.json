@@ -4,7 +4,9 @@
         "./mandelbrot"
     ],
     "cSpell.words": [
+        "julia",
         "mandelbrot",
-        "julia"
+        "zmax",
+        "zmin"
     ]
 }

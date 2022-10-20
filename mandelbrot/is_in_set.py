@@ -26,26 +26,27 @@ def seq(z: complex, c: complex) -> complex:
         z = z ** 2 + c
 
 
-def is_in_mandelbrot(candidate: complex, itermax: int = 200) -> bool:
-    """Test if a candidate complex number is within the Mandelbrot space.
+def is_in_mandelbrot(candidate: complex, max_iter: int = 200) -> bool:
+    """Test if a candidate complex number is within the Mandelbrot set.
 
     Parameters
     ----------
     candidate : complex
         The candidate complex number.
-    itermax : int, optional
+    max_iter : int, optional
         The maximum number of iteration, by default 200
 
     Returns
     -------
     bool
-        True if the candidate number is within the Mandelbrot space, else False.
+        True if the candidate number is within the Mandelbrot set, else False.
     """
-    return is_in_julia(0, candidate, itermax)
+
+    return is_in_julia(0, candidate, max_iter)
 
 
-def is_in_julia(z0: complex, candidate: complex, itermax: int = 200) -> bool:
-    """Test if a candidate complex number is within the Julia space.
+def is_in_julia(z0: complex, candidate: complex, max_iter: int = 200) -> bool:
+    """Test if a candidate complex number is within the Julia set.
 
     Parameters
     ----------
@@ -53,19 +54,19 @@ def is_in_julia(z0: complex, candidate: complex, itermax: int = 200) -> bool:
         The first element of the sequence for Julia
     candidate : complex
         The candidate complex number.
-    itermax : int, optional
+    max_iter : int, optional
         The maximum number of iteration, by default 200
 
     Returns
     -------
     bool
-        True if the candidate number is within the Julia space, else False.
+        True if z0 is within the Julia set, else False.
     """
 
     i = 0
     z = z0
     sequence = seq(z, candidate)
-    while i < itermax and abs(z) <= 2:
+    while i < max_iter and abs(z) <= 2:
         z = next(sequence)
         i += 1
     return abs(z) <= 2
