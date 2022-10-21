@@ -1,5 +1,7 @@
 .ipynb_checkpoints/
 build/
 mandelbrot.egg-info/
+*/__pycache__/
+*.pyc
 *.png
 !img/
