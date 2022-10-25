@@ -1,5 +1,6 @@
+import numba
 
-
+@numba.jit(nopython=True)
 def seq(z: complex, c: complex) -> complex:
     """Generate the next element for the $z_{n+1}=z_n^2+c$ sequence.
 
@@ -25,7 +26,7 @@ def seq(z: complex, c: complex) -> complex:
         yield z
         z = z ** 2 + c
 
-
+@numba.jit(nopython=True)
 def is_in_mandelbrot(candidate: complex, max_iter: int = 200) -> bool:
     """Test if a candidate complex number is within the Mandelbrot set.
 
@@ -44,7 +45,7 @@ def is_in_mandelbrot(candidate: complex, max_iter: int = 200) -> bool:
 
     return is_in_julia(0, candidate, max_iter)
 
-
+@numba.jit(nopython=True)
 def is_in_julia(z0: complex, candidate: complex, max_iter: int = 200) -> bool:
     """Test if a candidate complex number is within the Julia set.
 
