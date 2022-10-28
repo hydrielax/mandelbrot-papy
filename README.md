@@ -13,7 +13,7 @@ pip install .
 
 ### Website
 
-![https://hydrielax.github.io/mandelbrot-papy/](https://hydrielax.github.io/mandelbrot-papy/)
+[https://hydrielax.github.io/mandelbrot-papy/](https://hydrielax.github.io/mandelbrot-papy/)
 
 ### Mandelbrot
 
