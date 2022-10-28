@@ -51,3 +51,19 @@ juliaPlot [-h] [--candidate C] [--zmin ZMIN] [--zmax ZMAX] [--pixel-size PIXEL_S
 * `--pixel-size PIXEL_SIZE, -s PIXEL_SIZE`: The size of a pixel in the complex plane
 * `--max-iter MAX_ITER, -i MAX_ITER`: The maximum number of iterations
 * `--output FIGNAME, -o FIGNAME`: The name of the file where the picture will be saved.
+
+## Results
+
+### Mandelbrot
+
+```
+mandelbrotPlot -o output/mandelbrot.png
+```
+![](output/mandelbrot.png)
+
+### Julia
+
+```
+juliaPlot -o output/julia.png
+```
+![](output/julia.png)
