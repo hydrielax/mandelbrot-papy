@@ -8,17 +8,24 @@
 pip install .
 ```
 
-## Mandelbrot
+
+## Documentation
+
+### Website
+
+![https://hydrielax.github.io/mandelbrot-papy/](https://hydrielax.github.io/mandelbrot-papy/)
+
+### Mandelbrot
 
 Create a Mandelbrot figure.
 
-### Usage
+#### Usage
 
 ```
 mandelbrotPlot [-h] [--zmin ZMIN] [--zmax ZMAX] [--pixel-size PIXEL_SIZE] [--max-iter MAX_ITER] [--output FIGNAME]
 ```
 
-### Options
+#### Options
 
 * `--zmin ZMIN`: The minimum complex number (down-left corner)
 * `--zmax ZMAX`: The maximum complex number (up-right corner)
@@ -26,21 +33,17 @@ mandelbrotPlot [-h] [--zmin ZMIN] [--zmax ZMAX] [--pixel-size PIXEL_SIZE] [--max
 * `--max-iter MAX_ITER, -i MAX_ITER`: The maximum number of iterations
 * `--output FIGNAME, -o FIGNAME`: The name of the file where the picture will be saved.
 
-### Results
-
-...
-
-## Julia
+### Julia
 
 Create a Julia figure.
 
-### Usage 
+#### Usage 
 
 ```
 juliaPlot [-h] [--candidate C] [--zmin ZMIN] [--zmax ZMAX] [--pixel-size PIXEL_SIZE] [--max-iter MAX_ITER] [--output FIGNAME]
 ```
 
-### Options
+#### Options
 
 * `--candidate C, -c C`: Parameter defining a specific Julia set
 * `--zmin ZMIN`: The minimum complex number (down-left corner)
