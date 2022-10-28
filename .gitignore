@@ -4,4 +4,4 @@ mandelbrot.egg-info/
 __pycache__/
 *.pyc
 *.png
-!img/
+!sujet/img/*
